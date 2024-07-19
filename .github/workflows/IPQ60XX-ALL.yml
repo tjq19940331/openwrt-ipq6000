@@ -107,6 +107,7 @@ jobs:
         git clone https://github.com/sbwml/v2ray-geodata.git package/custom/daed/v2ray-geodata
         git clone https://github.com/danchexiaoyang/luci-app-onliner.git package/custom/luci-app-onliner
         git clone https://github.com/sirpdboy/luci-app-advancedplus.git package/custom/luci-app-advancedplus
+        git clone https://github.com/muink/luci-app-netspeedtest.git package/custom/luci-app-netspeedtest
 
         ./scripts/feeds install -a
         
