@@ -102,9 +102,9 @@ jobs:
         git clone https://github.com/tjq19940331/luci-app-adguardhome.git package/custom/adguardhome
         git clone https://github.com/tjq19940331/luci-app-lucky.git package/custom/luci-app-lucky
         git clone https://github.com/tjq19940331/homeproxy.git package/custom/homeproxy
-        git clone https://github.com/sbwml/luci-app-airconnect git package/custom/luci-app-airconnect
-        git clone https://github.com/sbwml/luci-app-daed package/daed
-        git clone https://github.com/sbwml/v2ray-geodata package/daed/v2ray-geodata
+        git clone https://github.com/sbwml/luci-app-airconnect.git package/custom/luci-app-airconnect
+        git clone https://github.com/sbwml/luci-app-daed.git package/custom/daed
+        git clone https://github.com/sbwml/v2ray-geodata.git package/custom/daed/v2ray-geodata
         
         ./scripts/feeds install -a
         
