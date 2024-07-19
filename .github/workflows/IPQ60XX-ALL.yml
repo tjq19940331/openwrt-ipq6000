@@ -105,7 +105,7 @@ jobs:
         git clone https://github.com/sbwml/luci-app-airconnect.git package/custom/luci-app-airconnect
         git clone https://github.com/sbwml/luci-app-daed.git package/custom/daed
         git clone https://github.com/sbwml/v2ray-geodata.git package/custom/daed/v2ray-geodata
-        
+        git clone https://github.com/danchexiaoyang/luci-app-onliner.git  package/custom/luci-app-onliner
         ./scripts/feeds install -a
         
         mkdir -p files/usr/bin/AdGuardHome
