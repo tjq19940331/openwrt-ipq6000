@@ -100,23 +100,16 @@ jobs:
         git clone https://github.com/sbwml/luci-app-daed.git package/custom/daed
         git clone https://github.com/sbwml/v2ray-geodata.git package/custom/daed/v2ray-geodata
         git clone https://github.com/danchexiaoyang/luci-app-onliner.git package/custom/luci-app-onliner
-        git clone https://github.com/sirpdboy/luci-app-advancedplus.git package/custom/luci-app-advancedplus
+        git clone https://github.com/tjq19940331/luci-app-advancedplus.git package/custom/luci-app-advancedplus
         git clone https://github.com/muink/luci-app-netspeedtest.git package/custom/luci-app-netspeedtest
 
         ./scripts/feeds install -a
         
-        mkdir -p files/usr/bin/AdGuardHome
-        AGH_CORE=$(curl -sL https://api.github.com/repos/AdguardTeam/AdGuardHome/releases/latest | grep /AdGuardHome_linux_${1} | awk -F '"' '{print $4}' | awk 'NR==3')
-        wget -qO- $AGH_CORE | tar xOvz > files/usr/bin/AdGuardHome/AdGuardHome
-        chmod +x files/usr/bin/AdGuardHome/AdGuardHome
         
         mkdir -p files/etc/openclash/core
         CLASH_META_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-arm64.tar.gz"
         wget -qO- $CLASH_META_URL | tar xOvz > files/etc/openclash/core/clash_meta
         
-        LUCKY_CORE=$(curl -sL https://api.github.com/repos/gdy666/lucky/releases/latest | grep _Linux_arm64${1} | grep /lucky_${1} | awk -F '"' '{print $4}' | awk 'NR==1')
-        wget -qO- $LUCKY_CORE | tar xOvz --wildcards 'lucky' > files/usr/bin/lucky
-        chmod +x files/usr/bin/lucky
 
   
     - name: Load Custom Configuration(加载自定义配置)
