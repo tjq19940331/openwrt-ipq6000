@@ -109,8 +109,6 @@ jobs:
         cat > "files/lib/upgrade/keep.d/luci-app-lucky" <<-EOF
         /etc/lucky/
         EOF
-        
-        mkdir -p files/lib/upgrade/keep.d
         cat > "files/lib/upgrade/keep.d/luci-app-adguardhome" <<-EOF
         /etc/config/adGuardConfig/AdGuardHome.yaml
         EOF
